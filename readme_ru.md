@@ -9,46 +9,46 @@
 # Методы библиотеки:
 
 `
-## GetTable() - возвращает файл гугл таблицы. Принимает ID файла. Если ID не указан - возвращает контейнер скрипта
+GetTable() - возвращает файл гугл таблицы. Принимает ID файла. Если ID не указан - возвращает контейнер скрипта
 `
 
-Методы GetTable():
+## Методы GetTable():
 
 `
-## GetSheet(sheet_id) - возвращает лист гугл таблицы. Принимает ID листа или его имя.
+GetSheet(sheet_id) - возвращает лист гугл таблицы. Принимает ID листа или его имя.
 
-## CreateSheet(sheet_id, sheet_name, sheet_index = 0) - Создает лист гугл таблицы. Принимает ID нового листа, имя нового листа, индекс нового листа. Возвращает созданный лист
+CreateSheet(sheet_id, sheet_name, sheet_index = 0) - Создает лист гугл таблицы. Принимает ID нового листа, имя нового листа, индекс нового листа. Возвращает созданный лист
 
-## DeleteSheet(sheet_id) - Удаляет лист гугл таблицы. Принимает ID листа. Возвращает true, если успешно.
+DeleteSheet(sheet_id) - Удаляет лист гугл таблицы. Принимает ID листа. Возвращает true, если успешно.
 
-## ChangeEditorsInProtectedRanges(gmails, adding) - Добавляет или удаляет из всех защищенных диапазонов указанный список пользователей. Принимает массив адресов и {Boolean}  adding: true - добавляем. false - убираем.
+ChangeEditorsInProtectedRanges(gmails, adding) - Добавляет или удаляет из всех защищенных диапазонов указанный список пользователей. Принимает массив адресов и {Boolean}  adding: true - добавляем. false - убираем.
 `
 
 
-Методы GetSheet():
+## Методы GetSheet():
 
 `
-## GetValues(firstRow = 1, firstCol = 1, rows = "", columns = 99) - Возвращает данные с листа
+GetValues(firstRow = 1, firstCol = 1, rows = "", columns = 99) - Возвращает данные с листа
 
-## SetValues(output_arr, firstRow = 1, firstCol = 1) - Помещает двумерный массив на лист
+SetValues(output_arr, firstRow = 1, firstCol = 1) - Помещает двумерный массив на лист
 
-## Clear(firstRow = 1, firstCol = 1, rows = "", columns = 99) - Стирает данные с листа гугл таблиц.
+Clear(firstRow = 1, firstCol = 1, rows = "", columns = 99) - Стирает данные с листа гугл таблиц.
 
-## ClearContent(firstRow = 1, firstCol = 1, rows = 0, columns = 99) - Стирает введенные пользователем данные с листа гугл таблиц, оставляя флажки, выпадающие списки, форматирование и тд
+ClearContent(firstRow = 1, firstCol = 1, rows = 0, columns = 99) - Стирает введенные пользователем данные с листа гугл таблиц, оставляя флажки, выпадающие списки, форматирование и тд
 
-## DeleteDuplicates(first_row = 1, first_col = 1, rows, columns) - Удаляет дубликаты строк в выбраном диапазоне.
+DeleteDuplicates(first_row = 1, first_col = 1, rows, columns) - Удаляет дубликаты строк в выбраном диапазоне.
 
-## DeleteRows(rows_arr) - Удаляет строки. Принимает одномерный массив номеров
+DeleteRows(rows_arr) - Удаляет строки. Принимает одномерный массив номеров
 
-## ConvertSheet(name, target_folder, format = "pdf") - создает в папке новый файл в выбранном формате из указаного листа гугл таблицы. Возвращает созданный файл
+ConvertSheet(name, target_folder, format = "pdf") - создает в папке новый файл в выбранном формате из указаного листа гугл таблицы. Возвращает созданный файл
 
-## ConvertSheetAndDownload(format = "pdf") - Скачать лист в выбранном формате. форматы pdf, xlsx, ods, zip, csv
+ConvertSheetAndDownload(format = "pdf") - Скачать лист в выбранном формате. форматы pdf, xlsx, ods, zip, csv
 `
 
-Методы GetValues():
+## Методы GetValues():
 
 `
-## GetValuesFromBasicFilter() - Возвращает данные, которые отображает на листе базовый фильтр
+GetValuesFromBasicFilter() - Возвращает данные, которые отображает на листе базовый фильтр
 `
 
 # Примеры использования:
