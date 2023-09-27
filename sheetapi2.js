@@ -258,22 +258,13 @@ class Sheet {
   * @param {number} rows - Row count or "false" for all
   * @param {number} columns - Columns count or "false" for all 
   */
-  ClearContent(firstRow = 1, firstCol = 1, rows = "", columns = 999) {
+  ClearContent(firstRow = 1, firstCol = 1, rows = 0, columns = 99) {
 
-    let sheets, sheet_id;
-
-    if (typeof this.sheet_id == "string") {
-
-      sheets = SS.getSheets();
-      sheet_id = sheets.filter(t => t.getName() == this.sheet_name)[0].getSheetId()
-
-    }
-
-    if (typeof this.sheet_id == "number")
-      sheet_id = this.sheet_id
+    if (!rows)
+      rows = this.sheet.getLastRow();
 
     const range = {
-      sheetId: sheet_id,
+      sheetId: this.sheet_id,
       startRowIndex: firstRow - 1,
       endRowIndex: firstRow + rows - 1,
       startColumnIndex: firstCol - 1,
@@ -289,7 +280,6 @@ class Sheet {
     }
 
     Sheets.Spreadsheets.batchUpdate({ "requests": requests }, this.ss_id);
-
 
   }
 
