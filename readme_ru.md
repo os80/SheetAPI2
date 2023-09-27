@@ -7,7 +7,7 @@
 Рекомендую разместить код библиотеки непосредственно в код вашего скрипта - тогда подсказки будут работать. В этом случае подключите сервис "Google Sheets API"
 
 # ID библиотеки
-```1pSLcssREljKdMD2Mx7IHKjKyhQM6sfUzQFBb2IrMECJ8VZXSjq8BHDsc```
+```1PUD7bpW7Bsfo16ABd0xpMh87G-HmaYKXg9kc1JJwlymyJyofhJVF7tY4```
 
 # Методы библиотеки:
 
