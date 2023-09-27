@@ -54,13 +54,13 @@ GetValuesFromBasicFilter() - Возвращает данные, которые �
 # Примеры использования:
 
 ```
-const file = GetTable().file // объект текущего файла
-const file = GetTable("1uE93B1mO7e4ZKYlcqUevmKCYTeI4t-5OS8ILXparctV8AsYr8W").file // объект указанного файла
+const file = SheetAPI2.GetTable().file // объект текущего файла
+const file = SheetAPI2.GetTable("1uE93B1mO7e4ZKYlcqUevmKCYTeI4t-5OS8ILXparctV8AsYr8W").file // объект указанного файла
 
-const sheet = GetTable().GetSheet(0).sheet // объект листа
-const sheet = GetTable().GetSheet("List1").sheet // объект листа
+const sheet = SheetAPI2.GetTable().GetSheet(0).sheet // объект листа
+const sheet = SheetAPI2.GetTable().GetSheet("List1").sheet // объект листа
 
-const values = GetTable().GetSheet(0).GetValues() // получить все данные с листа
-const values = GetTable().GetSheet(0).GetValues(3,4,false, 5) // получить данные с листа, начиная со строки 3 и колонки 4 (D4) пять колонок до самого низа листа
-const values = GetTable().GetSheet(0).GetValues().GetValuesFromBasicFilter() // получить данные с листа, которые отображает на листе базовый фильтр
+const values = SheetAPI2.GetTable().GetSheet(0).GetValues() // получить все данные с листа
+const values = SheetAPI2.GetTable().GetSheet(0).GetValues(3,4,false, 5) // получить данные с листа, начиная со строки 3 и колонки 4 (D4) пять колонок до самого низа листа
+const values = SheetAPI2.GetTable().GetSheet(0).GetValues().GetValuesFromBasicFilter() // получить данные с листа, которые отображает на листе базовый фильтр
 ```
